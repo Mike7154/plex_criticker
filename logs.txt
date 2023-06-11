@@ -1,0 +1,5 @@
+01/23/2023 22:07:35 : Could not login to your plex server, please check the plex email and password in settings.yml and try again
+01/30/2023 22:07:36 : Could not login to your plex server, please check the plex email and password in settings.yml and try again
+02/06/2023 22:07:35 : Could not login to your plex server, please check the plex email and password in settings.yml and try again
+02/13/2023 22:07:36 : Could not login to your plex server, please check the plex email and password in settings.yml and try again
+02/20/2023 22:07:36 : Could not login to your plex server, please check the plex email and password in settings.yml and try again

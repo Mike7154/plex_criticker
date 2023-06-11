@@ -1,0 +1,28 @@
+Login: #You can run the script and it will ask you to input all of these if they are blank
+  plex_email: mike-7154@hotmail.com
+  plex_password:
+  plex_server: Mike's Media
+  libraries:
+  - Movies
+  - TV Shows
+
+Criticker:
+  criticker_user: Mike7154
+  criticker_password:
+  xml: https://www.criticker.com/resource/recent/267350.xml
+  ratings_file: ratings.csv
+  ratings_json: ratings.json
+  collection: My Recommendations
+  rating_cutoff: 60
+  search_prefix: https://www.criticker.com/?search=
+  search_suffix: "&type=films"
+  psi_url: https://www.criticker.com/psi/
+  url_type:
+  - https://www.criticker.com/film/
+  - https://www.criticker.com/tv/
+  psi_interval: 90
+  psi_collection: High Probability Scores
+Misc:
+  hash: zZD4GuBheSxPSf037S1b*bL7HiCEW41nt3eHO+A6pPg==*1HO/rKsGIq3zLlEnrPr28Q==*lEaW8rd6OP6orh2PcCxcHg== # This will fill in automatically
+  chash: dO6mCsuKtlWfsxsbbpKZ*juMXzqyuTltGIVXsGkGz4A==*IS3Q1qjIWY1PdlaxvncXCw==*STJpl7BJ8TVSYskY3sFFfw==
+  weighted_collection: Featured This Week
