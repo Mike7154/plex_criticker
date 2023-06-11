@@ -74,8 +74,8 @@ def reorder_list(list1, orderby):
     for k in range(0,len(ranks)):
         new_order.extend([i for i in range(len(ranks)) if ranks[i] == k])
     return [list1[i] for i in new_order]
-from random import random
-from bisect import bisect_right
+#from random import random
+#from bisect import bisect_right
 import numpy as np
 
 def weighted_shuffle(a,w):
