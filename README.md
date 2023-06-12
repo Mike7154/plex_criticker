@@ -23,13 +23,13 @@
   <p align="center">
     Allows import of criticker ratings into plex
     <br />
-    <a href="https://github.com/Mike7154/plex_criticker"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Mike7154/plex_criticker"><strong>Explore the docs Â»</strong></a>
     <br />
     <br />
     <a href="https://github.com/Mike7154/plex_criticker">View Demo</a>
-    ·
+    Â·
     <a href="https://github.com/Mike7154/plex_criticker/issues">Report Bug</a>
-    ·
+    Â·
     <a href="https://github.com/Mike7154/plex_criticker/issues">Request Feature</a>
   </p>
 </div>
@@ -118,12 +118,12 @@ py import_criticker.py -arguments
 ```
 
 ### Arguments
-print("Arguments include -f for file-read, -x for xml read, -i for import ratings, -c for collection build, -p for creating a collection sorted by PSI")
--f : Reads a file of movies and ratings. You can download a csv file from your criticker profile
--x : Reads an xml file of movies and ratings. You can get an xml url of recent ratings from your criticker profile. The URL must be pasted into the settings.yml file
--i : Imports ratings into plex
--c : Creates a collection of movies in plex based on the ratings. The name of this collection is set in the settings.yml file
--p : Creates a collection of movies in plex based on the PSI of the movie. The name of this collection is set in the settings.yml file
+
+- -f : Reads a file of movies and ratings. You can download a csv file from your criticker profile
+- -x : Reads an xml file of movies and ratings. You can get an xml url of recent ratings from your criticker profile. The URL must be pasted into the settings.yml file
+- -i : Imports ratings into plex
+- -c : Creates a collection of movies in plex based on the ratings. The name of this collection is set in the settings.yml file
+- -p : Creates a collection of movies in plex based on the PSI of the movie. The name of this collection is set in the settings.yml file
 
 
 
@@ -171,7 +171,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - Dr215.code@gmail.com.com
+Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - Dr215+code@gmail.com
 
 Project Link: [https://github.com/Mike7154/plex_criticker](https://github.com/Mike7154/plex_criticker)
 
