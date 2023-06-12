@@ -117,29 +117,33 @@ def load_criticker_from_xml(url, dict_file = "ratings.json"):
 def import_criticker_collection(plex, crit_list, collection, libraries = ["Movies", "TV Shows"], rating_cutoff = 60, metric = 'rating', u_metric = 'rating_date'):
     for library in libraries:
         lib = plex.library.section(library)
+        print(library)
         a_items = []
         a_ratings = []
-        a_updated = []
+        a_updated = [general_functions.string_to_date("1900-01-01")]
         for crit in crit_list:
             score = getattr(crit, metric)
             updated = getattr(crit, u_metric)
+            #print(score)
             try:
                 if score >= rating_cutoff:
+                    #print(crit.guid)
                     item = lib.getGuid(crit.guid)
                     a_items.append(item)
                     a_ratings.append(100-score)
                     a_updated.append(updated)
+                    #print(item)
             except:
                 next
+                #print("next")
         if collection is not None:
             if plex_functions.collection_exists(collection, lib) == False:
                 i = lib.all()[0]
                 col = lib.createCollection(collection, i, sort = "custom")
                 col.removeItems(i)
             col = lib.collection(collection)
-            print(str(len(a_items)) + " movies meet import criteria - latest updated high scored movie" + general_functions.date_to_string(max(a_updated)))
-
-            if col.updatedAt.date() <= max(a_updated):
+            print(str(len(a_items)) + " movies meet import criteria")
+            if col.updatedAt.date() <= max(a_updated): #if collection is older than the newest rating
                 print("importing and reordering plex collection")
                 items = general_functions.reorder_list(a_items, a_ratings)
                 plex_functions.add_ordered_collection(col, items)
@@ -199,7 +203,8 @@ def import_psi(plex, rating_dict, rating_dict_file, libraries):
                 if crit.psi_date + timedelta(days = psi_interval) >= datetime.now().date():
                     skip = True
             if skip == False:
-                search_text = 'data-id="'+imdb+'"'
+                #search_text = 'data-id="'+imdb+'"'
+                search_text = imdb
                 search_url = search_prefix + i_title + search_suffix
                 if crit.url is None:
                     page = mlscraping.pages_search(sesh, search_url, search_text, search_match)

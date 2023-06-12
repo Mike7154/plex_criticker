@@ -13,7 +13,7 @@ import mlscraping
 
 print("Arguments include -f for file-read, -x for xml read, -i for import ratings, -c for collection build, -p for creating a collection sorted by PSI")
 plex = plex_functions.return_plex_from_settings()
-library = plex.library.section("TV Shows")
+#library = plex.library.section("TV Shows")
 rating_dict_file = mlfiles.load_setting("Criticker", "ratings_json")
 libraries = mlfiles.load_setting("Login","libraries")
 
@@ -33,7 +33,7 @@ if "-i" in sys.argv:
     criticker_functions.import_criticker_rating(plex, crit_list, libraries)
     criticker_functions.save_crit_dict(crit_list, rating_dict_file)
 
-if "-c" in sys.argv:
+if "-c" in sys.argv: #must run -i for the first time before running -c
     libraries = mlfiles.load_setting("Login","libraries")
     collection = mlfiles.load_setting("Criticker", "collection")
     rating_cutoff = mlfiles.load_setting("Criticker","rating_cutoff")
@@ -55,7 +55,7 @@ if "-p" in sys.argv:
             if crit.rating >= rating_cutoff:
                 new_crit_list.append(crit)
     crit_list = new_crit_list
-    criticker_functions.import_criticker_collection(plex, crit_list, collection, libraries, rating_cutoff+3, 'psi', 'psi_date')
+    criticker_functions.import_criticker_collection(plex, crit_list, collection, libraries, rating_cutoff, 'psi', 'psi_date')
 
 
 if "-test" in sys.argv:
@@ -66,5 +66,3 @@ if "-test" in sys.argv:
     criticker_functions.import_ratings_shuffle(plex, crit_list, libraries, collection)
 
 print("END OF SCRIPT")
-
-

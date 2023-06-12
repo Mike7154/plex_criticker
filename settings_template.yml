@@ -10,17 +10,17 @@ Criticker:
   xml: https://www.criticker.com/resource/recent/267350.xml #Criticker Profile > Recent Ratings > XML and paste the URL here
   ratings_file: ratings.csv                                 #You can download all of your ratings as a csv, rename it to match this, and place it in this directory to import
   ratings_json: ratings.json                                #ratings will be stored in this Json file
-  collection: My Recommendations
+  collection: My Recommendations							#collection to add high rated movies to in Plex
   rating_cutoff: 70                                         #rating cutoff to add to My Recommendations
-  search_prefix: https://www.criticker.com/?search=
-  search_suffix: "&type=films"
-  psi_url: https://www.criticker.com/psi/
+  search_prefix: https://www.criticker.com/?search=		     #search prefix for Criticker
+  search_suffix: "&type=films"                             #search suffix for Criticker
+  psi_url: https://www.criticker.com/psi/				#psi url for Criticker
   url_type:
   - https://www.criticker.com/film/
   - https://www.criticker.com/tv/
-  psi_interval: 90
-  psi_collection: High Probability Scores
+  psi_interval: 90 #number of days to look back for psi scores
+  psi_collection: High Probability Scores #collection to add high psi scores to
 Misc:
   hash:  # This will fill in automatically
-  chash: 
-  weighted_collection: Featured This Week
+  chash:
+  weighted_collection: Featured This Week 
